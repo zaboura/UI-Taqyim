@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F172A; /* Deep slate/almost black for ultra-premium feel */
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #F1F5F9;
+  --color-on-primary-container: #0F172A;
+  
+  --color-secondary: #4F46E5; /* Indigo for highlights/accents */
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #EEF2FF;
+  --color-on-secondary-container: #3730A3;
+  
+  --color-tertiary: #10B981; /* Emerald for success/positive accents */
+  --color-on-tertiary: #FFFFFF;
+  --color-tertiary-container: #D1FAE5;
+  --color-on-tertiary-container: #065F46;
+  
+  --color-background: #FAFAFA; /* Very subtle off-white */
+  --color-on-background: #09090B;
+  
+  --color-surface: #FFFFFF; /* Pure white for cards */
+  --color-on-surface: #09090B;
+  
+  --color-surface-variant: #F4F4F5;
+  --color-on-surface-variant: #52525B; /* Zinc 600 for secondary text */
+  
+  --color-outline: #E4E4E7; /* Zinc 200 for subtle borders */
+  --color-outline-variant: #F4F4F5; /* Zinc 100 for very subtle dividers */
+  
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-low: #FAFAFA;
+  --color-surface-container: #F4F4F5;
+  --color-surface-container-high: #E4E4E7;
+  --color-surface-container-highest: #D4D4D8;
+  
+  --color-error: #EF4444;
+  --color-on-error: #FFFFFF;
+  
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glass-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-outline);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+}
+
+.premium-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+}
+
+.aurora-bg {
+  background: radial-gradient(circle at 20% 20%, #EEF2FF 0%, transparent 40%),
+              radial-gradient(circle at 80% 80%, #F1F5F9 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, #FAFAFA 0%, #F4F4F5 100%);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-outline);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-on-surface-variant);
+}
